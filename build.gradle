@@ -1,0 +1,26 @@
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+jar {
+    manifest {
+        attributes("Main-Class": "MedalRackStream.class",
+                   "Implementation-Title": "Gradle",
+                   "Implementation-Version": version,
+                   "Application-Name":"MyJava8StreamsExample")
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile(
+            [group: 'junit', name: 'junit', version: '4.11'],
+            [group: 'org.hamcrest', name: 'hamcrest-all', version: '1.3']
+    )
+}
