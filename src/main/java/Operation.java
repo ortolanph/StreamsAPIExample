@@ -12,7 +12,7 @@ public enum Operation implements OperationStrategy<Double> {
 
     private OperationStrategy<Double> operationStrategy;
 
-    private Operation(OperationStrategy<Double> operationStrategy) {
+    Operation(OperationStrategy<Double> operationStrategy) {
         this.operationStrategy = operationStrategy;
     }
 
